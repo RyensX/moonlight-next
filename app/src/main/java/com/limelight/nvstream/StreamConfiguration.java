@@ -30,6 +30,7 @@ public class StreamConfiguration {
     private int colorRange;
     private int colorSpace;
     private boolean persistGamepadsAfterDisconnect;
+    private boolean enableUltraLowLatency;
 
     public static class Builder {
         private StreamConfiguration config = new StreamConfiguration();
@@ -140,6 +141,11 @@ public class StreamConfiguration {
             return this;
         }
 
+        public StreamConfiguration.Builder setEnableUltraLowLatency(boolean enable) {
+            config.enableUltraLowLatency = enable;
+            return this;
+        }
+
         public StreamConfiguration build() {
             return config;
         }
@@ -162,6 +168,7 @@ public class StreamConfiguration {
         this.audioConfiguration = MoonBridge.AUDIO_CONFIGURATION_STEREO;
         this.supportedVideoFormats = MoonBridge.VIDEO_FORMAT_H264;
         this.attachedGamepadMask = 0;
+        this.enableUltraLowLatency = false;
     }
     
     public int getWidth() {
@@ -238,5 +245,9 @@ public class StreamConfiguration {
 
     public int getColorSpace() {
         return colorSpace;
+    }
+
+    public boolean getEnableUltraLowLatency() {
+        return enableUltraLowLatency;
     }
 }

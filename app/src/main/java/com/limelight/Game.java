@@ -573,6 +573,7 @@ public class Game extends FragmentActivity implements SurfaceHolder.Callback,
                 .setResolutionScaleFactor(prefConfig.resolutionScaleFactor)
                 .setApp(app)
                 .setBitrate(onlyInputMode ? 1 : prefConfig.bitrate)
+                .setEnableUltraLowLatency(prefConfig.enableUltraLowLatency)
                 .setEnableSops(prefConfig.enableSops)
                 .enableLocalAudioPlayback(prefConfig.playHostAudio)
                 .setMaxPacketSize(1392)

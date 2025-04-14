@@ -30,6 +30,13 @@
             android:text="@string/suffix_seekbar_bitrate_mbps"
             android:title="@string/title_seekbar_bitrate" />
 
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="checkbox_ultra_low_latency"
+            android:summary="@string/summary_checkbox_ultra_low_latency"
+            android:title="@string/title_checkbox_ultra_low_latency"
+            />
+
         <EditTextPreference
             android:key="edit_diy_bitrate"
             android:defaultValue="20"
